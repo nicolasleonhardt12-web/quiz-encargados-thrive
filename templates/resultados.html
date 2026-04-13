@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultados - Evaluaci&oacute;n Encargados</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#FF2631;--dark:#1E293B;--green:#2E7D32;--green-bg:#E8F5E9;--red-bg:#FFEBEE;--blue:#1565C0;--orange:#F57C00;--gray:#6B6B6B}
+body{font-family:'Segoe UI',Calibri,Arial,sans-serif;background:#F1F5F9;color:var(--dark);min-height:100vh}
+
+.navbar{background:var(--dark);padding:16px 24px;border-bottom:3px solid var(--red);display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100}
+.navbar-title{color:white;font-size:16px;font-weight:700;letter-spacing:0.5px}
+.navbar-icon{font-size:22px}
+
+.container{max-width:1100px;margin:0 auto;padding:24px 16px}
+
+/* STATS CARDS */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:28px}
+.stat-card{background:white;border-radius:14px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);text-align:center}
+.stat-value{font-size:36px;font-weight:800;margin-bottom:4px}
+.stat-label{font-size:13px;color:var(--gray);font-weight:500}
+.stat-value.green{color:var(--green)}
+.stat-value.red{color:var(--red)}
+.stat-value.blue{color:var(--blue)}
+
+/* SECTION */
+.section{margin-bottom:28px}
+.section-title{font-size:18px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+
+/* TABLE */
+.table-wrap{background:white;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+table{width:100%;border-collapse:collapse}
+th{background:#F8FAFC;padding:12px 16px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;color:var(--gray);font-weight:600;border-bottom:2px solid #E2E8F0}
+td{padding:12px 16px;border-bottom:1px solid #F1F5F9;font-size:14px}
+tr:hover{background:#FAFBFC}
+tr:last-child td{border-bottom:none}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700}
+.badge-pass{background:var(--green-bg);color:var(--green)}
+.badge-fail{background:var(--red-bg);color:var(--red)}
+.link{color:var(--blue);text-decoration:none;font-weight:600}
+.link:hover{text-decoration:underline}
+
+/* QUESTION STATS */
+.q-stat{background:white;border-radius:12px;padding:14px 16px;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,0,0,0.04);display:flex;align-items:center;gap:14px}
+.q-stat-bar{flex:1;background:#F1F5F9;height:8px;border-radius:4px;overflow:hidden}
+.q-stat-fill{height:100%;border-radius:4px;transition:width 0.5s}
+.q-stat-fill.good{background:var(--green)}
+.q-stat-fill.mid{background:var(--orange)}
+.q-stat-fill.bad{background:var(--red)}
+.q-stat-num{font-size:14px;font-weight:700;min-width:44px;text-align:right}
+.q-stat-text{font-size:12px;color:#555;flex:2;line-height:1.4}
+.q-stat-cat{font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--gray);font-weight:600}
+.q-stat-id{width:28px;height:28px;border-radius:50%;background:var(--dark);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+
+.empty-state{text-align:center;padding:60px 20px;color:var(--gray)}
+.empty-state-icon{font-size:48px;margin-bottom:12px}
+
+@media(max-width:600px){
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat-value{font-size:28px}
+  th,td{padding:8px 10px;font-size:12px}
+  .q-stat{flex-wrap:wrap}
+  .q-stat-text{flex-basis:100%;order:10;margin-top:4px}
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <span class="navbar-icon">&#x1F4CA;</span>
+  <span class="navbar-title">RESULTADOS &mdash; Evaluaci&oacute;n Encargados</span>
+</div>
+
+<div class="container">
+
+  {% if total_submissions == 0 %}
+  <div class="empty-state">
+    <div class="empty-state-icon">&#x1F4CB;</div>
+    <h2>Sin resultados a&uacute;n</h2>
+    <p style="margin-top:8px">Cuando los aspirantes completen la evaluaci&oacute;n, sus resultados aparecer&aacute;n aqu&iacute;.</p>
+    <p style="margin-top:16px">Link de evaluaci&oacute;n: <a href="/" class="link">Abrir evaluaci&oacute;n</a></p>
+  </div>
+
+  {% else %}
+
+  <!-- STATS -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-value blue">{{ total_submissions }}</div>
+      <div class="stat-label">Evaluaciones Completadas</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value {% if avg_score >= 70 %}green{% else %}red{% endif %}">{{ avg_score }}%</div>
+      <div class="stat-label">Promedio General</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value {% if pass_rate >= 50 %}green{% else %}red{% endif %}">{{ pass_rate }}%</div>
+      <div class="stat-label">Tasa de Aprobaci&oacute;n</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" style="color:var(--dark)">{{ quiz.questions|length }}</div>
+      <div class="stat-label">Preguntas en Evaluaci&oacute;n</div>
+    </div>
+  </div>
+
+  <!-- SUBMISSIONS TABLE -->
+  <div class="section">
+    <div class="section-title">&#x1F465; Resultados Individuales</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Sucursal</th>
+            <th>Nota</th>
+            <th>Resultado</th>
+            <th>Tiempo</th>
+            <th>Fecha</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in submissions %}
+          <tr>
+            <td><strong>{{ s.nombre }}</strong></td>
+            <td>{{ s.sucursal }}</td>
+            <td><strong>{{ s.score }}/{{ s.total }}</strong> ({{ s.percentage }}%)</td>
+            <td><span class="badge {% if s.passed %}badge-pass{% else %}badge-fail{% endif %}">{% if s.passed %}APROBADO{% else %}NO APROBADO{% endif %}</span></td>
+            <td>{% if s.time_taken_seconds %}{{ (s.time_taken_seconds // 60) }}m {{ (s.time_taken_seconds % 60) }}s{% else %}-{% endif %}</td>
+            <td>{{ s.submitted_at[:16] | replace('T',' ') }}</td>
+            <td><a href="/resultados/{{ s.id }}" class="link">Ver detalle</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- QUESTION ANALYTICS -->
+  <div class="section">
+    <div class="section-title">&#x1F4CA; An&aacute;lisis por Pregunta</div>
+    {% for qs in question_stats %}
+    <div class="q-stat">
+      <div class="q-stat-id">{{ qs.id }}</div>
+      <div class="q-stat-text">
+        <div class="q-stat-cat">{{ qs.category }}</div>
+        {{ qs.text[:100] }}{% if qs.text|length > 100 %}...{% endif %}
+      </div>
+      <div class="q-stat-bar">
+        <div class="q-stat-fill {% if qs.pct >= 70 %}good{% elif qs.pct >= 40 %}mid{% else %}bad{% endif %}" style="width:{{ qs.pct }}%"></div>
+      </div>
+      <div class="q-stat-num" style="color:{% if qs.pct >= 70 %}var(--green){% elif qs.pct >= 40 %}var(--orange){% else %}var(--red){% endif %}">{{ qs.pct }}%</div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% endif %}
+</div>
+</body>
+</html>
