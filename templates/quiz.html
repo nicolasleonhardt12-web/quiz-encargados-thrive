@@ -152,16 +152,12 @@ body{font-family:'Segoe UI',Calibri,Arial,sans-serif;background:var(--dark);colo
           <label class="form-label">Sucursal</label>
           <select class="form-select" id="inputSucursal">
             <option value="">Selecciona tu sucursal...</option>
-            <option value="AgroChina Zona 10">AgroChina Zona 10</option>
-            <option value="AgroChina Zona 11">AgroChina Zona 11</option>
-            <option value="AgroChina Zona 15">AgroChina Zona 15</option>
-            <option value="AgroChina Carretera a El Salvador">AgroChina Carretera a El Salvador</option>
-            <option value="AgroChina Mixco">AgroChina Mixco</option>
-            <option value="AgroChina Portales">AgroChina Portales</option>
-            <option value="AgroChina Roosevelt">AgroChina Roosevelt</option>
-            <option value="AgroChina San Cristobal">AgroChina San Cristobal</option>
-            <option value="AgroChina Xela">AgroChina Xela</option>
-            <option value="Otra">Otra</option>
+            <option value="GoBao Z16">GoBao Z16</option>
+            <option value="GoBao Z10">GoBao Z10</option>
+            <option value="GoBao Z14">GoBao Z14</option>
+            <option value="GoBao CAES">GoBao CAES</option>
+            <option value="Agrochina Z1">Agrochina Z1</option>
+            <option value="Agrochina Quetzaltenango">Agrochina Quetzaltenango</option>
           </select>
         </div>
       </div>
@@ -226,24 +222,7 @@ QUESTIONS.forEach((q, i) => {
   content.insertBefore(div, resultsScreen);
 });
 
-// Confirm screen
-const confirmDiv = document.createElement('div');
-confirmDiv.className = 'screen';
-confirmDiv.id = 'screen-confirm';
-confirmDiv.innerHTML = `
-  <div class="welcome-center">
-    <div class="welcome-icon">&#x1F4E9;</div>
-    <div class="welcome-title">Enviar Evaluaci&oacute;n</div>
-    <div class="welcome-sub">Revisa tus respuestas antes de enviar.<br>Una vez enviada no podr&aacute;s modificarlas.</div>
-  </div>
-  <div class="unanswered-warning" id="unansweredWarning">
-    &#x26A0; Tienes preguntas sin responder
-  </div>
-  <div id="confirmSummary"></div>
-`;
-content.insertBefore(confirmDiv, resultsScreen);
-
-const totalScreens = 1 + TOTAL + 1 + 1; // welcome + questions + confirm + results
+const totalScreens = 1 + TOTAL + 1; // welcome + questions + results
 
 function getCatClass(cat) {
   const map = {
@@ -271,21 +250,14 @@ function showScreen(idx) {
 
   if (idx === 0) {
     document.getElementById('screen-welcome').classList.add('active');
-    btnPrev.disabled = true;
+    btnPrev.style.display = 'none';
     btnNext.textContent = 'Comenzar';
     btnNext.disabled = false;
   } else if (idx <= TOTAL) {
     document.getElementById(`screen-q${idx}`).classList.add('active');
-    btnPrev.disabled = false;
-    btnNext.textContent = idx === TOTAL ? 'Revisar' : 'Siguiente';
+    btnPrev.style.display = 'none';
+    btnNext.textContent = 'Siguiente';
     btnNext.disabled = false;
-  } else if (idx === TOTAL + 1) {
-    // Confirm screen
-    document.getElementById('screen-confirm').classList.add('active');
-    btnPrev.disabled = false;
-    btnNext.textContent = 'Enviar Evaluaci\u00F3n';
-    btnNext.disabled = false;
-    buildConfirmSummary();
   } else {
     // Results
     document.getElementById('screen-results').classList.add('active');
@@ -312,15 +284,12 @@ btnNext.addEventListener('click', () => {
     if (!sucursal) { alert('Por favor selecciona tu sucursal.'); return; }
     startTimer();
     showScreen(1);
-  } else if (currentScreen <= TOTAL) {
+  } else if (currentScreen < TOTAL) {
     showScreen(currentScreen + 1);
-  } else if (currentScreen === TOTAL + 1) {
+  } else if (currentScreen === TOTAL) {
+    // Last question — auto-submit
     submitQuiz();
   }
-});
-
-btnPrev.addEventListener('click', () => {
-  if (currentScreen > 1) showScreen(currentScreen - 1);
 });
 
 // ── Select option ───────────────────────────────────────────────────────────
@@ -330,6 +299,16 @@ function selectOption(qid, oidx, el) {
   // Clear siblings
   el.parentElement.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
   el.classList.add('selected');
+
+  // Auto-advance after selecting an answer (small delay for visual feedback)
+  setTimeout(() => {
+    if (currentScreen < TOTAL) {
+      showScreen(currentScreen + 1);
+    } else if (currentScreen === TOTAL) {
+      // Last question answered — auto-submit immediately
+      submitQuiz();
+    }
+  }, 400);
 }
 
 // ── Timer ───────────────────────────────────────────────────────────────────
@@ -370,35 +349,6 @@ function updateTimerDisplay() {
   } else if (timeRemaining <= 180) {
     timerText.classList.add('timer-warning');
   }
-}
-
-// ── Confirm summary ─────────────────────────────────────────────────────────
-function buildConfirmSummary() {
-  const unanswered = QUESTIONS.filter(q => answers[q.id] === undefined);
-  const warning = document.getElementById('unansweredWarning');
-  if (unanswered.length > 0) {
-    warning.style.display = 'flex';
-    warning.innerHTML = `&#x26A0; Tienes ${unanswered.length} pregunta${unanswered.length > 1 ? 's' : ''} sin responder`;
-  } else {
-    warning.style.display = 'none';
-  }
-
-  const summary = document.getElementById('confirmSummary');
-  let html = '';
-  QUESTIONS.forEach((q, i) => {
-    const answered = answers[q.id] !== undefined;
-    html += `
-      <div class="info-card ${answered ? 'blue' : ''}" style="border-left-color:${answered ? 'var(--green)' : 'var(--red)'}">
-        <div class="info-card-title" style="font-size:13px">
-          <span style="color:${answered ? 'var(--green)' : 'var(--red)'}">${answered ? '&#x2705;' : '&#x26A0;'}</span>
-          Pregunta ${i+1}: ${q.category}
-        </div>
-        <div class="info-card-body" style="font-size:12px">
-          ${answered ? q.options[answers[q.id]].substring(0,80) + (q.options[answers[q.id]].length > 80 ? '...' : '') : '<em>Sin responder</em>'}
-        </div>
-      </div>`;
-  });
-  summary.innerHTML = html;
 }
 
 // ── Submit ───────────────────────────────────────────────────────────────────
