@@ -112,6 +112,7 @@ body{font-family:'Segoe UI',Calibri,Arial,sans-serif;background:var(--dark);colo
 .cat-reportes{color:#F57C00}.cat-alimentos{color:#7B1FA2}.cat-equipos{color:#00838F}
 .cat-contactos{color:#5D4037}.cat-promociones{color:#F57C00}.cat-operaciones{color:#1565C0}
 .cat-servicio{color:#C2185B}
+.cat-atencion{color:#E65100}
 </style>
 </head>
 <body>
@@ -154,7 +155,7 @@ body{font-family:'Segoe UI',Calibri,Arial,sans-serif;background:var(--dark);colo
       </div>
       <div class="info-card blue">
         <div class="info-card-title">&#x1F4DD; Preguntas</div>
-        <div class="info-card-body"><strong>19 preguntas</strong> de opci&oacute;n m&uacute;ltiple sobre: cambios y devoluciones, cierre de caja, recepci&oacute;n de producto, reportes, preparaci&oacute;n de alimentos, equipos, y m&aacute;s.</div>
+        <div class="info-card-body"><strong>26 preguntas</strong> de opci&oacute;n m&uacute;ltiple sobre: atenci&oacute;n al cliente, cambios y devoluciones, cierre de caja, recepci&oacute;n de producto, reportes, preparaci&oacute;n de alimentos, equipos, y m&aacute;s.</div>
       </div>
       <div class="info-card orange">
         <div class="info-card-title">&#x2705; Aprobaci&oacute;n</div>
@@ -252,7 +253,8 @@ function getCatClass(cat) {
     'Contactos y Soporte': 'cat-contactos',
     'Promociones': 'cat-promociones',
     'Operaciones': 'cat-operaciones',
-    'Servicio al Cliente': 'cat-servicio'
+    'Servicio al Cliente': 'cat-servicio',
+    'Atención al Cliente': 'cat-atencion'
   };
   return map[cat] || '';
 }

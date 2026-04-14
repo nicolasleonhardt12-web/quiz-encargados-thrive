@@ -263,6 +263,97 @@ QUIZ = {
             ],
             "correct": 2,
             "explanation": "Reclamos que NO proceden incluyen: tipo de música, iluminación, ambiente o factores externos, y negarse a vender alcohol a menores o personas en estado etílico."
+        },
+        {
+            "id": 20,
+            "category": "Atención al Cliente",
+            "text": "Un cliente ingresa a la tienda. ¿Cuál es la forma correcta de atenderlo?",
+            "options": [
+                "Quedarse en caja y esperar a que el cliente se acerque con una consulta.",
+                "Salir del mostrador, saludar al cliente con contacto visual y una sonrisa, darle la bienvenida y preguntar si necesita ayuda.",
+                "Gritar desde la caja '¡Bienvenido!' y seguir con lo que estaba haciendo.",
+                "Seguir al cliente por toda la tienda para asegurarse de que no robe nada."
+            ],
+            "correct": 1,
+            "explanation": "Lo correcto es salir del mostrador, hacer contacto visual, saludar con una sonrisa, dar la bienvenida y ofrecer ayuda. El cliente debe sentirse atendido desde que entra."
+        },
+        {
+            "id": 21,
+            "category": "Atención al Cliente",
+            "text": "Estás atendiendo a un cliente en caja y entra otro cliente a la tienda. ¿Qué debes hacer?",
+            "options": [
+                "Ignorar al nuevo cliente hasta terminar con el que estás atendiendo.",
+                "Dejar al cliente actual para ir a atender al nuevo.",
+                "Hacer contacto visual con el nuevo cliente, saludarlo y decirle que en un momento lo atiendes, mientras terminas con el cliente actual.",
+                "Pedirle al nuevo cliente que espere afuera hasta que termines."
+            ],
+            "correct": 2,
+            "explanation": "Nunca se ignora a un cliente. Se hace contacto visual, se saluda y se le indica que en un momento será atendido. El cliente actual mantiene la prioridad pero el nuevo debe sentirse reconocido."
+        },
+        {
+            "id": 22,
+            "category": "Atención al Cliente",
+            "text": "Un cliente está recorriendo la tienda sin pedir ayuda. ¿Cuál es la actitud correcta?",
+            "options": [
+                "Dejarlo completamente solo para que no se sienta presionado.",
+                "Mantener una actitud atenta y disponible, y si pasa un tiempo prudente, acercarse amablemente a preguntar si necesita ayuda o busca algo en particular.",
+                "Acercarse cada 30 segundos para preguntarle si ya encontró lo que busca.",
+                "Avisarle que si no va a comprar nada, otros clientes están esperando."
+            ],
+            "correct": 1,
+            "explanation": "El equilibrio es clave: estar disponible sin ser invasivo. Después de un tiempo prudente, acercarse de forma amable a ofrecer ayuda demuestra interés genuino en el cliente."
+        },
+        {
+            "id": 23,
+            "category": "Atención al Cliente",
+            "text": "Un cliente te hace una pregunta sobre un producto que no conoces o no sabes la respuesta. ¿Qué debes hacer?",
+            "options": [
+                "Inventar una respuesta para no quedar mal.",
+                "Decirle que no sabes y que busque la información en internet.",
+                "Ser honesto, decirle que vas a verificar la información y consultar con un compañero o buscar la respuesta correcta para darle una respuesta precisa.",
+                "Decirle que ese producto no se vende aquí para evitar la pregunta."
+            ],
+            "correct": 2,
+            "explanation": "Nunca se inventa información. La honestidad genera confianza. Se debe consultar con un compañero o verificar la información para dar una respuesta correcta al cliente."
+        },
+        {
+            "id": 24,
+            "category": "Atención al Cliente",
+            "text": "Estás atendiendo al cliente y suena tu teléfono personal. ¿Qué debes hacer?",
+            "options": [
+                "Contestar rápidamente y pedir al cliente que espere un momento.",
+                "No contestar. El cliente que tienes enfrente siempre tiene prioridad. Puedes revisar tu teléfono cuando no estés atendiendo.",
+                "Poner el teléfono en altavoz para poder atender ambas cosas a la vez.",
+                "Pedirle a un compañero que conteste tu teléfono."
+            ],
+            "correct": 1,
+            "explanation": "El cliente presente siempre tiene la prioridad. El teléfono personal no debe interferir con la atención al cliente. Se revisa en momentos donde no se esté atendiendo a nadie."
+        },
+        {
+            "id": 25,
+            "category": "Atención al Cliente",
+            "text": "Un cliente pide un producto que está agotado. ¿Cuál es la respuesta correcta?",
+            "options": [
+                "Decirle 'no hay' y seguir con otra cosa.",
+                "Informarle que está agotado, ofrecerle una alternativa similar si existe, y si es posible indicarle cuándo podría estar disponible nuevamente.",
+                "Decirle que venga mañana porque tal vez llega.",
+                "Culpar a logística o bodega frente al cliente por no haber enviado el producto."
+            ],
+            "correct": 1,
+            "explanation": "Se informa con amabilidad, se ofrece una alternativa y si es posible se da un estimado de reabastecimiento. Nunca se culpa a otros departamentos frente al cliente."
+        },
+        {
+            "id": 26,
+            "category": "Atención al Cliente",
+            "text": "Al despedir a un cliente después de su compra, ¿cuál es la forma correcta?",
+            "options": [
+                "No es necesario despedirlo, con cobrarle es suficiente.",
+                "Agradecerle su compra, entregarle su bolsa y despedirlo con amabilidad invitándolo a regresar.",
+                "Decirle 'siguiente' para atender al próximo cliente rápidamente.",
+                "Despedirlo solo si compró mucho, si compró poco no es necesario."
+            ],
+            "correct": 1,
+            "explanation": "Todo cliente merece una despedida amable sin importar el monto de su compra. Agradecer, entregar su bolsa y despedirlo con cortesía genera una buena experiencia y fidelización."
         }
     ]
 }
