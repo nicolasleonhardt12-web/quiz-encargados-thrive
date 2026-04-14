@@ -319,19 +319,6 @@ QUIZ = {
         {
             "id": 24,
             "category": "Atención al Cliente",
-            "text": "Estás atendiendo al cliente y suena tu teléfono personal. ¿Qué debes hacer?",
-            "options": [
-                "Contestar rápidamente y pedir al cliente que espere un momento.",
-                "No contestar. El cliente que tienes enfrente siempre tiene prioridad. Puedes revisar tu teléfono cuando no estés atendiendo.",
-                "Poner el teléfono en altavoz para poder atender ambas cosas a la vez.",
-                "Pedirle a un compañero que conteste tu teléfono."
-            ],
-            "correct": 1,
-            "explanation": "El cliente presente siempre tiene la prioridad. El teléfono personal no debe interferir con la atención al cliente. Se revisa en momentos donde no se esté atendiendo a nadie."
-        },
-        {
-            "id": 25,
-            "category": "Atención al Cliente",
             "text": "Un cliente pide un producto que está agotado. ¿Cuál es la respuesta correcta?",
             "options": [
                 "Decirle 'no hay' y seguir con otra cosa.",
@@ -343,7 +330,7 @@ QUIZ = {
             "explanation": "Se informa con amabilidad, se ofrece una alternativa y si es posible se da un estimado de reabastecimiento. Nunca se culpa a otros departamentos frente al cliente."
         },
         {
-            "id": 26,
+            "id": 25,
             "category": "Atención al Cliente",
             "text": "Al despedir a un cliente después de su compra, ¿cuál es la forma correcta?",
             "options": [
@@ -354,6 +341,97 @@ QUIZ = {
             ],
             "correct": 1,
             "explanation": "Todo cliente merece una despedida amable sin importar el monto de su compra. Agradecer, entregar su bolsa y despedirlo con cortesía genera una buena experiencia y fidelización."
+        },
+        {
+            "id": 26,
+            "category": "Higiene y Presentación",
+            "text": "¿Cuál es la presentación personal correcta que debe tener un colaborador durante su turno?",
+            "options": [
+                "Usar la ropa que quiera siempre que esté limpia.",
+                "Uniforme completo y limpio, cabello recogido o presentable, uñas cortas y limpias, sin accesorios excesivos, y uso de redecilla o gorra en área de alimentos.",
+                "Solo es necesario usar el uniforme, lo demás no importa.",
+                "Uniforme limpio y cualquier tipo de calzado es aceptable."
+            ],
+            "correct": 1,
+            "explanation": "La presentación incluye: uniforme completo y limpio, cabello recogido, uñas cortas y limpias, sin accesorios excesivos, y redecilla o gorra en áreas de preparación de alimentos."
+        },
+        {
+            "id": 27,
+            "category": "Higiene y Presentación",
+            "text": "¿Cuándo es obligatorio lavarse las manos durante el turno?",
+            "options": [
+                "Solo al inicio del turno.",
+                "Antes y después de manipular alimentos, después de ir al baño, después de tocar basura o superficies sucias, después de toser o estornudar, y al cambiar de actividad.",
+                "Solo cuando se manipulan alimentos crudos.",
+                "Una vez cada hora es suficiente."
+            ],
+            "correct": 1,
+            "explanation": "El lavado de manos es obligatorio: antes y después de manipular alimentos, después del baño, después de tocar basura o superficies contaminadas, después de toser/estornudar, y al cambiar de actividad."
+        },
+        {
+            "id": 28,
+            "category": "Higiene y Presentación",
+            "text": "¿Cuál es la forma correcta de mantener el área de mostrador y exhibición durante el turno?",
+            "options": [
+                "Limpiar solo al final del día cuando se hace el cierre.",
+                "Limpiar solo cuando el encargado lo indique.",
+                "Mantener limpio y ordenado en todo momento: limpiar derrames de inmediato, organizar productos, y asegurarse de que las vitrinas y superficies estén libres de polvo y residuos.",
+                "Limpiar únicamente si un cliente hace un comentario sobre la limpieza."
+            ],
+            "correct": 2,
+            "explanation": "Las áreas de exhibición y mostrador deben mantenerse limpias y ordenadas TODO el turno, no solo al cierre. Los derrames se limpian de inmediato y las superficies deben estar libres de polvo y residuos."
+        },
+        {
+            "id": 29,
+            "category": "Higiene y Presentación",
+            "text": "¿Está permitido comer o beber en el área de atención al cliente o zona de preparación de alimentos?",
+            "options": [
+                "Sí, siempre que sea rápido y no haya clientes.",
+                "Sí, solo si es agua.",
+                "No. Comer y beber está permitido únicamente en el área designada para descanso, nunca en zonas de atención al cliente o preparación de alimentos.",
+                "Sí, si se tiene un recipiente con tapa."
+            ],
+            "correct": 2,
+            "explanation": "Comer y beber solo se permite en el área designada para descanso. En zonas de atención al cliente y preparación de alimentos está prohibido por normas de higiene y por imagen profesional."
+        },
+        {
+            "id": 30,
+            "category": "Higiene y Presentación",
+            "text": "¿Con qué frecuencia se debe limpiar y desinfectar el equipo de preparación de alimentos (vaporeras, wafleras, utensilios)?",
+            "options": [
+                "Solo al final del día.",
+                "Una vez por semana a fondo es suficiente.",
+                "Después de cada uso y una limpieza profunda al cierre del día. Los utensilios deben estar siempre limpios y listos para el siguiente servicio.",
+                "Solo cuando se note suciedad visible."
+            ],
+            "correct": 2,
+            "explanation": "Los equipos se limpian después de cada uso para evitar contaminación cruzada, y se realiza una limpieza profunda al cierre. Los utensilios deben estar siempre listos y en condiciones higiénicas."
+        },
+        {
+            "id": 31,
+            "category": "Higiene y Presentación",
+            "text": "Un cliente nota que la tienda está desordenada o sucia. ¿Qué imagen proyecta esto?",
+            "options": [
+                "No tiene mayor importancia mientras los productos estén bien.",
+                "Proyecta desorganización, falta de profesionalismo y genera desconfianza sobre la calidad e higiene de los productos, especialmente los alimentos.",
+                "Solo importa si es la primera vez que el cliente visita la tienda.",
+                "Solo afecta si el área de alimentos está sucia, las demás áreas no importan."
+            ],
+            "correct": 1,
+            "explanation": "La limpieza y orden de TODA la tienda refleja profesionalismo y genera confianza. Un establecimiento desordenado o sucio genera desconfianza sobre la calidad de los productos y alimentos."
+        },
+        {
+            "id": 32,
+            "category": "Higiene y Presentación",
+            "text": "¿Qué elementos de protección son obligatorios al preparar alimentos para los clientes?",
+            "options": [
+                "Solo guantes.",
+                "Guantes desechables, redecilla o gorra para el cabello, y uniforme limpio. En caso de heridas en las manos, cubrir con vendaje y guante adicional.",
+                "No se necesita protección si uno se lavó las manos antes.",
+                "Solo redecilla, los guantes son opcionales."
+            ],
+            "correct": 1,
+            "explanation": "Para manipular alimentos se requieren guantes desechables, redecilla o gorra, uniforme limpio, y en caso de heridas cubrir con vendaje y guante adicional para evitar contaminación."
         }
     ]
 }
