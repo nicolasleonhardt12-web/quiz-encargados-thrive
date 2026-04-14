@@ -530,12 +530,12 @@ QUIZ = {
             "text": "¿Qué verificaciones de seguridad se deben realizar antes de cerrar la tienda?",
             "options": [
                 "Solo cerrar la puerta con llave.",
-                "Verificar que todos los equipos estén apagados (excepto refrigeración y congelación), cerrar llaves de gas si aplica, asegurar puertas y accesos, activar alarma si existe, y confirmar que no quede nadie dentro.",
+                "Verificar que todos los equipos estén apagados (excepto refrigeración y congelación), asegurar puertas y accesos, y confirmar que no quede nadie dentro.",
                 "Solo verificar que la caja esté cerrada.",
                 "Apagar las luces y cerrar la puerta principal."
             ],
             "correct": 1,
-            "explanation": "Al cierre se verifica: equipos apagados (excepto refrigeración/congelación que deben quedar encendidos), llaves de gas cerradas, puertas aseguradas, alarma activada, y confirmación de que no quede nadie dentro."
+            "explanation": "Al cierre se verifica: equipos apagados (excepto refrigeración/congelación que deben quedar encendidos), puertas y accesos asegurados, y confirmación de que no quede nadie dentro."
         },
         {
             "id": 41,
@@ -543,12 +543,12 @@ QUIZ = {
             "text": "¿Qué se debe hacer con los productos perecederos y alimentos preparados que quedaron al cierre?",
             "options": [
                 "Dejarlos en el mostrador para venderlos al día siguiente.",
-                "Almacenar correctamente en refrigeración los que aún estén en buen estado y dentro de su vida útil, desechar los que ya no cumplan con los estándares de calidad, y registrar la merma.",
+                "Desechar los que ya no cumplan con los estándares de calidad y registrar la merma correspondiente.",
                 "Regalar todo lo que sobró a los empleados.",
                 "Guardarlos en cualquier lugar fresco."
             ],
             "correct": 1,
-            "explanation": "Los perecederos en buen estado se almacenan correctamente en refrigeración. Los que no cumplan estándares se desechan y se registra la merma. Nunca se dejan fuera de refrigeración."
+            "explanation": "Los alimentos preparados que no cumplan estándares de calidad se desechan y se registra la merma correspondiente. Nunca se dejan en el mostrador para el día siguiente."
         }
     ]
 }
