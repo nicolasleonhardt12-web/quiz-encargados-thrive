@@ -117,6 +117,9 @@ body{font-family:'Segoe UI',Calibri,Arial,sans-serif;background:var(--dark);colo
 .cat-higiene{color:#00695C}
 .cat-apertura{color:#1B5E20}
 .cat-cierre-tienda{color:#4A148C}
+.cat-motivacion{color:#E91E63}
+.cat-ventas{color:#FF6F00}
+.cat-rrhh{color:#283593}
 </style>
 </head>
 <body>
@@ -158,11 +161,11 @@ body{font-family:'Segoe UI',Calibri,Arial,sans-serif;background:var(--dark);colo
       </div>
       <div class="info-card">
         <div class="info-card-title">&#x23F1; Tiempo L&iacute;mite</div>
-        <div class="info-card-body">Tienes <strong>15 minutos</strong> para completar la evaluaci&oacute;n. El cron&oacute;metro inicia al presionar "Comenzar". Si el tiempo se agota, se enviar&aacute;n autom&aacute;ticamente tus respuestas.</div>
+        <div class="info-card-body">Tienes <strong>30 minutos</strong> para completar la evaluaci&oacute;n. El cron&oacute;metro inicia al presionar "Comenzar". Si el tiempo se agota, se enviar&aacute;n autom&aacute;ticamente tus respuestas.</div>
       </div>
       <div class="info-card blue">
         <div class="info-card-title">&#x1F4DD; Preguntas</div>
-        <div class="info-card-body"><strong>41 preguntas</strong> de opci&oacute;n m&uacute;ltiple sobre: atenci&oacute;n al cliente, higiene, apertura y cierre de tienda, cambios y devoluciones, cierre de caja, recepci&oacute;n de producto, preparaci&oacute;n de alimentos, equipos, y m&aacute;s.</div>
+        <div class="info-card-body"><strong>55 preguntas</strong> de opci&oacute;n m&uacute;ltiple sobre: atenci&oacute;n al cliente, higiene, apertura y cierre de tienda, motivaci&oacute;n de personal, venta y promociones, recursos humanos, y m&aacute;s.</div>
       </div>
       <div class="info-card orange">
         <div class="info-card-title">&#x2705; Aprobaci&oacute;n</div>
@@ -264,7 +267,10 @@ function getCatClass(cat) {
     'Atención al Cliente': 'cat-atencion',
     'Higiene y Presentación': 'cat-higiene',
     'Apertura de Tienda': 'cat-apertura',
-    'Cierre de Tienda': 'cat-cierre-tienda'
+    'Cierre de Tienda': 'cat-cierre-tienda',
+    'Motivación de Personal': 'cat-motivacion',
+    'Venta y Promociones': 'cat-ventas',
+    'Recursos Humanos': 'cat-rrhh'
   };
   return map[cat] || '';
 }

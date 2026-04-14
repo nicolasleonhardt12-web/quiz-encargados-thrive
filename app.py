@@ -14,7 +14,7 @@ DB_PATH = os.path.join(os.path.dirname(__file__), "resultados.db")
 # ── Quiz Data ──────────────────────────────────────────────────────────────────
 QUIZ = {
     "title": "Evaluación para Encargados de Tienda",
-    "time_limit_minutes": 15,
+    "time_limit_minutes": 30,
     "passing_score": 70,
     "questions": [
         {
@@ -549,6 +549,188 @@ QUIZ = {
             ],
             "correct": 1,
             "explanation": "Los alimentos preparados que no cumplan estándares de calidad se desechan y se registra la merma correspondiente. Nunca se dejan en el mostrador para el día siguiente."
+        },
+        {
+            "id": 42,
+            "category": "Motivación de Personal",
+            "text": "Como encargado, un miembro de tu equipo ha bajado su rendimiento en las últimas semanas. ¿Cuál es la forma correcta de abordar la situación?",
+            "options": [
+                "Ignorarlo y esperar que mejore solo.",
+                "Llamarle la atención frente a sus compañeros para que se ponga las pilas.",
+                "Hablar en privado con la persona, preguntar si hay algo que le afecte, escuchar con empatía y juntos buscar una solución o plan de mejora.",
+                "Reportarlo directamente a recursos humanos para que lo sancionen."
+            ],
+            "correct": 2,
+            "explanation": "Un buen líder aborda los problemas en privado, escucha con empatía y busca soluciones junto al colaborador. Las llamadas de atención públicas desmotivan y dañan la confianza del equipo."
+        },
+        {
+            "id": 43,
+            "category": "Motivación de Personal",
+            "text": "Un colaborador hizo un excelente trabajo atendiendo a un cliente difícil. ¿Qué debería hacer el encargado?",
+            "options": [
+                "No decir nada, es su trabajo y es lo que se espera.",
+                "Reconocer su buen desempeño frente al equipo, felicitarlo y usar el ejemplo como referencia positiva para todos.",
+                "Darle el día libre como premio.",
+                "Mencionarlo solo en la próxima evaluación formal dentro de varios meses."
+            ],
+            "correct": 1,
+            "explanation": "El reconocimiento oportuno y público motiva no solo al colaborador sino a todo el equipo. No hay que esperar evaluaciones formales para reconocer un buen trabajo."
+        },
+        {
+            "id": 44,
+            "category": "Motivación de Personal",
+            "text": "¿Cuál es la mejor forma de delegar tareas a tu equipo como encargado?",
+            "options": [
+                "Hacer todo uno mismo porque nadie lo hace tan bien como uno.",
+                "Asignar tareas claras según las fortalezas de cada persona, explicar qué se espera, dar las herramientas necesarias y hacer seguimiento sin microgestionar.",
+                "Asignar las tareas difíciles siempre a la misma persona porque es la más capaz.",
+                "Dar las instrucciones una vez y si no entienden, que pregunten."
+            ],
+            "correct": 1,
+            "explanation": "La delegación efectiva incluye: asignar según fortalezas, dar instrucciones claras, proporcionar herramientas y hacer seguimiento. Un buen encargado desarrolla a su equipo, no hace todo solo."
+        },
+        {
+            "id": 45,
+            "category": "Motivación de Personal",
+            "text": "Hay un conflicto entre dos miembros de tu equipo que está afectando el ambiente laboral. ¿Qué debe hacer el encargado?",
+            "options": [
+                "No meterse, que lo resuelvan entre ellos.",
+                "Tomar partido por el que tiene razón frente al otro.",
+                "Hablar con cada uno por separado para entender ambas versiones, luego mediar una conversación para buscar una solución y restaurar el buen ambiente de trabajo.",
+                "Separar sus turnos para que no se vean y así se evita el problema."
+            ],
+            "correct": 2,
+            "explanation": "El encargado debe actuar como mediador: escuchar ambas partes por separado, entender la raíz del conflicto, y facilitar una solución. Ignorar o evitar el conflicto solo lo agrava."
+        },
+        {
+            "id": 46,
+            "category": "Motivación de Personal",
+            "text": "¿Qué actitud debe tener un encargado cuando comete un error?",
+            "options": [
+                "Nunca admitirlo para no perder autoridad frente al equipo.",
+                "Culpar a alguien más para proteger su imagen.",
+                "Reconocer el error con honestidad, corregirlo y usarlo como ejemplo de que todos podemos equivocarnos y mejorar.",
+                "Minimizarlo y cambiar de tema rápidamente."
+            ],
+            "correct": 2,
+            "explanation": "Un líder que reconoce sus errores genera respeto y confianza. Admitir errores y corregirlos demuestra madurez y da permiso al equipo para ser honesto también."
+        },
+        {
+            "id": 47,
+            "category": "Venta y Promociones",
+            "text": "Un cliente está comprando arroz y hay una promoción activa de salsa de soya. ¿Qué debe hacer el colaborador?",
+            "options": [
+                "No decir nada, el cliente ya sabe lo que quiere.",
+                "Informarle amablemente sobre la promoción de salsa de soya, mencionando que combina bien con su compra y el beneficio del precio especial.",
+                "Insistir agresivamente hasta que el cliente la compre.",
+                "Poner la salsa de soya en su bolsa sin preguntar."
+            ],
+            "correct": 1,
+            "explanation": "La venta sugestiva debe ser amable y relevante. Se informa al cliente de la promoción relacionada con su compra, se menciona el beneficio y se deja que el cliente decida sin presión."
+        },
+        {
+            "id": 48,
+            "category": "Venta y Promociones",
+            "text": "¿Cuál es la forma correcta de comunicar una promoción al cliente?",
+            "options": [
+                "Solo poner un letrero en la góndola y esperar que lo vean.",
+                "Mencionar la promoción de forma natural durante la interacción: nombre del producto, precio especial, vigencia y beneficio para el cliente.",
+                "Decirle al cliente que si no la aprovecha se va a arrepentir.",
+                "Solo mencionarla si el cliente pregunta directamente por ofertas."
+            ],
+            "correct": 1,
+            "explanation": "Las promociones se comunican activamente de forma natural y amable. Se menciona el producto, precio especial, vigencia y beneficio. Los letreros ayudan pero la comunicación verbal es clave."
+        },
+        {
+            "id": 49,
+            "category": "Venta y Promociones",
+            "text": "Un cliente habitual siempre compra los mismos 3 productos. ¿Cómo puede el colaborador generar una venta adicional?",
+            "options": [
+                "No se debe intentar venderle más, ya es cliente fiel.",
+                "Conocer sus gustos y sugerirle un producto nuevo o complementario que podría gustarle, como recomendar un producto que otros clientes con gustos similares han probado.",
+                "Ofrecerle los productos más caros de la tienda.",
+                "Darle muestras gratis de todo para que compre más."
+            ],
+            "correct": 1,
+            "explanation": "Conocer al cliente permite hacer recomendaciones personalizadas y relevantes. La venta adicional efectiva se basa en agregar valor al cliente, no en presionarlo."
+        },
+        {
+            "id": 50,
+            "category": "Venta y Promociones",
+            "text": "¿Por qué es importante que todo el equipo conozca las promociones vigentes?",
+            "options": [
+                "No es importante, solo el encargado necesita saberlo.",
+                "Para que cualquier miembro del equipo pueda informar al cliente correctamente, ofrecer el producto en promoción y evitar cobrar precios incorrectos.",
+                "Solo para poner los letreros correctos.",
+                "Para poder hablar de algo con los clientes."
+            ],
+            "correct": 1,
+            "explanation": "Todo el equipo debe conocer las promociones para: informar correctamente al cliente, hacer venta sugestiva, y evitar errores de precio en caja. Un equipo informado vende más y da mejor servicio."
+        },
+        {
+            "id": 51,
+            "category": "Recursos Humanos",
+            "text": "¿Cuál de las siguientes situaciones DEBE reportarse obligatoriamente a Recursos Humanos?",
+            "options": [
+                "Un compañero que llegó 2 minutos tarde una vez.",
+                "Acoso laboral, discriminación, robo, consumo de sustancias en horario de trabajo o cualquier conducta que ponga en riesgo la seguridad del equipo o de los clientes.",
+                "Un compañero que no te cae bien personalmente.",
+                "Un desacuerdo sobre quién limpia el baño ese día."
+            ],
+            "correct": 1,
+            "explanation": "Situaciones de acoso, discriminación, robo, consumo de sustancias o riesgo a la seguridad son de reporte obligatorio a RRHH. Los desacuerdos menores se resuelven internamente."
+        },
+        {
+            "id": 52,
+            "category": "Recursos Humanos",
+            "text": "Un colaborador te cuenta en confianza que otro compañero le hace comentarios ofensivos constantemente. ¿Qué debe hacer el encargado?",
+            "options": [
+                "Decirle que no le haga caso y que aguante.",
+                "Tomarlo en serio, documentar la situación, hablar con el colaborador señalado, y si la conducta persiste o es grave, reportar a Recursos Humanos.",
+                "Contarle a todo el equipo para que opinen quién tiene razón.",
+                "Ignorarlo porque son cosas entre compañeros."
+            ],
+            "correct": 1,
+            "explanation": "El acoso o comentarios ofensivos nunca se deben ignorar. El encargado debe tomar acción: documentar, abordar la situación y escalar a RRHH si es necesario. Proteger el bienestar del equipo es prioridad."
+        },
+        {
+            "id": 53,
+            "category": "Recursos Humanos",
+            "text": "Un colaborador tiene ausencias frecuentes sin justificación. ¿Cuál es el proceso correcto?",
+            "options": [
+                "No decir nada para no crear conflicto.",
+                "Despedirlo inmediatamente sin hablar con él.",
+                "Documentar las ausencias, hablar con el colaborador para entender la situación, establecer un plan de mejora con compromisos claros, y reportar a RRHH si continúa.",
+                "Cubrirlo siempre con otros compañeros sin comentar nada."
+            ],
+            "correct": 2,
+            "explanation": "Las ausencias se documentan, se habla con el colaborador, se busca entender y se establece un plan de mejora. Si persiste, se escala a RRHH con la documentación como respaldo."
+        },
+        {
+            "id": 54,
+            "category": "Recursos Humanos",
+            "text": "¿Qué tipo de incidentes se deben documentar por escrito como encargado?",
+            "options": [
+                "Solo los incidentes que involucren dinero.",
+                "Llegadas tarde recurrentes, ausencias, conflictos entre personal, quejas de clientes sobre un colaborador, accidentes laborales y cualquier conducta que viole las políticas de la empresa.",
+                "Solo lo que Recursos Humanos pida específicamente.",
+                "No es necesario documentar nada, basta con recordarlo."
+            ],
+            "correct": 1,
+            "explanation": "La documentación es esencial para: respaldar decisiones, dar seguimiento a planes de mejora, proteger a la empresa y al equipo, y tener evidencia en caso de acciones disciplinarias."
+        },
+        {
+            "id": 55,
+            "category": "Recursos Humanos",
+            "text": "Un colaborador se lastima durante su turno de trabajo. ¿Cuál es el procedimiento correcto?",
+            "options": [
+                "Decirle que siga trabajando si no es tan grave.",
+                "Atender la emergencia inmediatamente, brindar primeros auxilios si es posible, documentar el incidente con detalle (qué pasó, cuándo, cómo) y reportarlo a Recursos Humanos y a su jefe inmediato.",
+                "Solo reportarlo si el colaborador lo pide.",
+                "Mandarlo a su casa sin documentar nada."
+            ],
+            "correct": 1,
+            "explanation": "Todo accidente laboral debe atenderse de inmediato, documentarse detalladamente y reportarse a RRHH y al jefe inmediato. Esto protege al colaborador y a la empresa legalmente."
         }
     ]
 }
