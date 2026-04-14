@@ -432,6 +432,123 @@ QUIZ = {
             ],
             "correct": 1,
             "explanation": "Para manipular alimentos se requieren guantes desechables, redecilla o gorra, uniforme limpio, y en caso de heridas cubrir con vendaje y guante adicional para evitar contaminación."
+        },
+        {
+            "id": 33,
+            "category": "Apertura de Tienda",
+            "text": "¿Cuál es la PRIMERA acción al llegar a la tienda antes de la apertura?",
+            "options": [
+                "Encender las luces y abrir la puerta al público.",
+                "Revisar que todo esté en orden: verificar que no haya indicios de ingreso no autorizado, revisar equipos de refrigeración y congelación, encender luces y sistemas.",
+                "Ir directo a caja a contar el fondo.",
+                "Poner música y preparar café."
+            ],
+            "correct": 1,
+            "explanation": "Lo primero es verificar la seguridad del establecimiento, revisar que equipos de refrigeración y congelación estén funcionando correctamente, y luego encender luces y sistemas."
+        },
+        {
+            "id": 34,
+            "category": "Apertura de Tienda",
+            "text": "¿Qué se debe hacer con los equipos de preparación de alimentos (vaporera, waflera) antes de abrir?",
+            "options": [
+                "Encenderlos cuando llegue el primer cliente que pida algo.",
+                "Encenderlos con anticipación para que estén a temperatura correcta al momento de la apertura, verificar que estén limpios y en buen estado.",
+                "Solo encender la waflera, la vaporera no es necesaria temprano.",
+                "No encenderlos hasta después de las 10am."
+            ],
+            "correct": 1,
+            "explanation": "Los equipos se encienden con anticipación para que alcancen la temperatura adecuada al abrir. Se verifica que estén limpios del cierre anterior y funcionando correctamente."
+        },
+        {
+            "id": 35,
+            "category": "Apertura de Tienda",
+            "text": "¿Qué tareas de limpieza se deben realizar ANTES de abrir la tienda al público?",
+            "options": [
+                "Solo barrer la entrada.",
+                "Barrer y trapear pisos, limpiar vitrinas y mostradores, limpiar vidrios de la entrada, verificar que los baños estén limpios y con insumos, y asegurarse de que el área de alimentos esté desinfectada.",
+                "Limpiar solo si se ve sucio, si se ve bien no es necesario.",
+                "La limpieza se hace al cierre, no a la apertura."
+            ],
+            "correct": 1,
+            "explanation": "Antes de abrir se debe: barrer y trapear pisos, limpiar vitrinas y mostradores, limpiar vidrios, verificar baños con insumos, y desinfectar el área de alimentos. La tienda debe estar impecable al abrir."
+        },
+        {
+            "id": 36,
+            "category": "Apertura de Tienda",
+            "text": "¿Qué se debe verificar en las góndolas y estanterías antes de la apertura?",
+            "options": [
+                "No es necesario revisarlas, se llenan cuando se acaban los productos.",
+                "Verificar que estén surtidas, con productos al frente (FIFO), etiquetas de precios visibles y correctas, y que no haya productos vencidos en exhibición.",
+                "Solo verificar que las etiquetas de precios estén puestas.",
+                "Revisarlas solo los lunes cuando llega producto nuevo."
+            ],
+            "correct": 1,
+            "explanation": "Antes de abrir se verifica: góndolas surtidas, productos al frente rotados (FIFO - primero en entrar, primero en salir), etiquetas de precio visibles y correctas, y sin productos vencidos en exhibición."
+        },
+        {
+            "id": 37,
+            "category": "Apertura de Tienda",
+            "text": "¿Qué significa la rotación FIFO y por qué es importante aplicarla al surtir góndolas?",
+            "options": [
+                "FIFO significa 'First In, First Out': el producto que entró primero a inventario se coloca al frente para que se venda primero, evitando vencimientos.",
+                "FIFO significa colocar los productos más bonitos al frente.",
+                "FIFO es un sistema de conteo de inventario que se usa al cierre.",
+                "FIFO significa que el producto más caro va al frente."
+            ],
+            "correct": 0,
+            "explanation": "FIFO (First In, First Out / Primero en Entrar, Primero en Salir) asegura que los productos con fecha de vencimiento más cercana estén al frente y se vendan primero, reduciendo merma por vencimiento."
+        },
+        {
+            "id": 38,
+            "category": "Cierre de Tienda",
+            "text": "¿Cuáles son las tareas de limpieza obligatorias al cierre de la tienda?",
+            "options": [
+                "Solo barrer y apagar luces.",
+                "Limpiar y desinfectar área de preparación de alimentos y equipos, barrer y trapear pisos, limpiar mostradores y vitrinas, vaciar basureros, y dejar baños limpios.",
+                "Solo limpiar si fue un día con mucho movimiento.",
+                "Barrer y dejar la limpieza profunda para el turno de la mañana."
+            ],
+            "correct": 1,
+            "explanation": "Al cierre se debe: limpiar y desinfectar área de alimentos y equipos, barrer y trapear, limpiar mostradores y vitrinas, vaciar basureros, y dejar baños limpios. La tienda debe quedar lista para la apertura del siguiente día."
+        },
+        {
+            "id": 39,
+            "category": "Cierre de Tienda",
+            "text": "¿Qué se debe hacer con los equipos de preparación de alimentos al cierre?",
+            "options": [
+                "Solo apagarlos.",
+                "Apagarlos, limpiarlos a fondo, desinfectar superficies, vaciar residuos de agua del generador de vapor si aplica, y dejarlos listos para el siguiente día.",
+                "Dejarlos encendidos toda la noche para que estén listos en la mañana.",
+                "Limpiarlos solo por fuera y apagarlos."
+            ],
+            "correct": 1,
+            "explanation": "Al cierre los equipos se apagan, se limpian a fondo por dentro y fuera, se desinfectan superficies, se vacían residuos, y se dejan listos para el uso del siguiente día."
+        },
+        {
+            "id": 40,
+            "category": "Cierre de Tienda",
+            "text": "¿Qué verificaciones de seguridad se deben realizar antes de cerrar la tienda?",
+            "options": [
+                "Solo cerrar la puerta con llave.",
+                "Verificar que todos los equipos estén apagados (excepto refrigeración y congelación), cerrar llaves de gas si aplica, asegurar puertas y accesos, activar alarma si existe, y confirmar que no quede nadie dentro.",
+                "Solo verificar que la caja esté cerrada.",
+                "Apagar las luces y cerrar la puerta principal."
+            ],
+            "correct": 1,
+            "explanation": "Al cierre se verifica: equipos apagados (excepto refrigeración/congelación que deben quedar encendidos), llaves de gas cerradas, puertas aseguradas, alarma activada, y confirmación de que no quede nadie dentro."
+        },
+        {
+            "id": 41,
+            "category": "Cierre de Tienda",
+            "text": "¿Qué se debe hacer con los productos perecederos y alimentos preparados que quedaron al cierre?",
+            "options": [
+                "Dejarlos en el mostrador para venderlos al día siguiente.",
+                "Almacenar correctamente en refrigeración los que aún estén en buen estado y dentro de su vida útil, desechar los que ya no cumplan con los estándares de calidad, y registrar la merma.",
+                "Regalar todo lo que sobró a los empleados.",
+                "Guardarlos en cualquier lugar fresco."
+            ],
+            "correct": 1,
+            "explanation": "Los perecederos en buen estado se almacenan correctamente en refrigeración. Los que no cumplan estándares se desechan y se registra la merma. Nunca se dejan fuera de refrigeración."
         }
     ]
 }
